@@ -96,6 +96,7 @@ static CGFloat const kAnimationDuration = 0.5;
         self.isZooming = NO;
         self.gestureDisabledDuringZooming = YES;
         self.isDefocusingWithTap = NO;
+        self.isImageRotationEnabled=YES;
     }
     
     return self;
@@ -149,6 +150,7 @@ static CGFloat const kAnimationDuration = 0.5;
 
     viewController = [[ASMediaFocusController alloc] initWithNibName:nil bundle:nil];
     [self installDefocusActionOnFocusViewController:viewController];
+    viewController.isImageRotationEnabled=self.isImageRotationEnabled;
     viewController.titleLabel.text = [self.delegate mediaFocusManager:self titleForView:mediaView];
     viewController.mainImageView.image = image;
     

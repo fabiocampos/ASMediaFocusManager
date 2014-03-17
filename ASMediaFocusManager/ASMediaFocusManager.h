@@ -51,6 +51,8 @@
 @property (nonatomic, assign) BOOL gestureDisabledDuringZooming;
 // Returns whether defocuses with tap. Defaults to NO.
 @property (nonatomic) BOOL isDefocusingWithTap;
+// Disable image rotation when the device postion is changed. Defaults to YES.
+@property (nonatomic) BOOL isImageRotationEnabled;
 
 - (void)installOnViews:(NSArray *)views;
 - (void)installOnView:(UIView *)view;

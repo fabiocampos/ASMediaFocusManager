@@ -89,7 +89,7 @@ static NSTimeInterval const kDefaultOrientationAnimationDuration = 0.4;
     CGRect frame;
     NSTimeInterval duration = kDefaultOrientationAnimationDuration;
     
-    if([UIDevice currentDevice].orientation == self.previousOrientation)
+    if(!self.isImageRotationEnabled||([UIDevice currentDevice].orientation == self.previousOrientation))
         return;
     
     if((UIInterfaceOrientationIsLandscape([UIDevice currentDevice].orientation) && UIInterfaceOrientationIsLandscape(self.previousOrientation))
